@@ -1,13 +1,17 @@
 package dp;
 
 /**
+ *
+ * Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+ * A subarray is a contiguous part of an array.
+ *
  * @author xiaoming
  * @since 2.0
  */
 public class MaximumSubarray {
 
 
-    public int maxSubarray(int[] array) {
+    public int maxSubArray(int[] array) {
         int m = array.length;
         if (m <= 0) {
             return 0;
@@ -31,7 +35,7 @@ public class MaximumSubarray {
     public static void main(String[] args) {
         int[] data = new int[]{-1, 2, 3, 1, -1, -3, 7};
         MaximumSubarray solution = new MaximumSubarray();
-        int maxValue = solution.maxSubarray(data);
+        int maxValue = solution.maxSubArray(data);
         System.out.println(maxValue);
     }
 

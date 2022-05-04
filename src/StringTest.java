@@ -48,6 +48,7 @@ public class StringTest {
 
         System.out.println("123456".indexOf("null"));
 
+
     }
 
 

@@ -14,7 +14,8 @@ public class LongestSubstring {
         int longest = 0;
         int rPos = 0;
         for(int i = 0; i < len; i++) {
-            Character c = s.charAt(i);
+//            char c = s.charAt(i);
+//            System.out.println(c);
             if(i != 0) {
                 occ.remove(s.charAt(i-1));
             }
