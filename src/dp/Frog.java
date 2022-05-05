@@ -29,9 +29,28 @@ public class Frog {
         return ret;
     }
 
+    int jump_1(int n) {
+        int[] a = new int[2];
+        if (n < 1) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        a[0] = 1;
+        a[1] = 2;
+        for (int i = 3; i <= n; i++) {
+            int t = a[0] + a[1];
+            a[0] = a[1];
+            a[1] = t;
+            // a[i] = a[i - 1] + a[i - 2];
+        }
+        return a[1];
+    }
+
     public static void main(String[] args) {
         Frog frog = new Frog();
-        System.out.println(frog.jump(9));
+        System.out.println(frog.jump_1(9));
     }
 
 

@@ -8,7 +8,7 @@ package dp;
  * @author xiaoming
  * @since 2.0
  */
-public class MaximumSubarray {
+public class MaximumSubArray {
 
 
     public int maxSubArray(int[] array) {
@@ -34,7 +34,7 @@ public class MaximumSubarray {
 
     public static void main(String[] args) {
         int[] data = new int[]{-1, 2, 3, 1, -1, -3, 7};
-        MaximumSubarray solution = new MaximumSubarray();
+        MaximumSubArray solution = new MaximumSubArray();
         int maxValue = solution.maxSubArray(data);
         System.out.println(maxValue);
     }
