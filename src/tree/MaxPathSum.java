@@ -28,4 +28,22 @@ package tree;
  *
  */
 public class MaxPathSum {
+
+    public int maxPathSum(TreeNode root) {
+
+        int leftChildSum = Math.max(0, root.value);
+        int sum = root.value + maxPathSum(root.right) + maxPathSum(root.left);
+        return -1;
+    }
+
+    public int maxGain(TreeNode root) {
+
+        return -1;
+    }
+
+    public static void main(String[] args) {
+
+
+    }
+
 }

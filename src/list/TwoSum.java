@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 1. Two Sum
+ *
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  * You can return the answer in any order.
@@ -39,8 +41,31 @@ public class TwoSum {
     }
 
 
+    /**
+     * @param nums
+     * @param target
+     * @return
+     */
+    static int[] twoSum_sorted(int[] nums, int target) {
+        int i = 0;
+        int j = nums.length - 1;
+        while (i < j) {
+            int sum = nums[i] + nums[j];
+            if (sum == target) {
+                return new int[]{i + 1, j + 1};
+            } else if (sum > target) {
+                j--;
+            } else {
+                i++;
+            }
+        }
+
+        return new int[2];
+    }
+
+
     public static void main(String[] args) {
-        int[] nums = {12, 17, 22, 29, 44, 6, 50};
+        int[] nums = {6, 12, 17, 22, 29, 44, 50};
         int target = 66;
         int[] result = twoSum(nums, target);
         System.out.printf("Target: %d, two number indexes: [%d, %d]. \n", target, result[0], result[1]);

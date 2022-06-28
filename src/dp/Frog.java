@@ -30,13 +30,10 @@ public class Frog {
     }
 
     int jump_1(int n) {
+        if (n <= 2) {
+            return n;
+        }
         int[] a = new int[2];
-        if (n < 1) {
-            return 0;
-        }
-        if (n == 1) {
-            return 1;
-        }
         a[0] = 1;
         a[1] = 2;
         for (int i = 3; i <= n; i++) {
@@ -50,7 +47,10 @@ public class Frog {
 
     public static void main(String[] args) {
         Frog frog = new Frog();
-        System.out.println(frog.jump_1(9));
+
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(frog.jump_1(45));
+        System.out.println(frog.jump(48));
     }
 
 
